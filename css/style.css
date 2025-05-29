@@ -1,86 +1,91 @@
-@import url(http://fonts.googleapis.com/css?family=Gabriela);
-
-html, body {
-  height: 100%;
-  min-height: 100%;
+/* General Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: url(../images/backgrounds/architecture.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 .wrapper {
+  max-width: 900px;
   margin: 0 auto;
-  width: 60%;
-  padding-bottom: 40px;
+  background: white;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-#content {
-  padding: 20px;
-  background: rgba(255,255,255,.85);
+/* Header */
+header h1 {
+  font-size: 2.8rem;
+  color: #1a3e72;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-h1, h2 {
-  font-family: 'Gabriela', serif;
-  color: #fff;
+/* Sub Head */
+#sub-head h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #3e5a99;
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-h1 {
-  font-size: 3.5em;
-  margin-bottom: 0;
+/* Content Articles */
+#content article {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
 }
 
-h2 {
-  font-size: 1.5em;
-  margin-top: .5em;
+/* Article Titles */
+#content h3 {
+  color: #1a3e72;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
 }
 
-h3 {
-  font-family: 'Gabriela', serif;
-  font-size: 1.5em;
-  margin-top: .5em;
-}
-
-img {
+/* Images */
+#content img {
   max-width: 100%;
-  width: 100%;
   height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-p {
-  font-size: 1em;
+/* Paragraphs */
+#content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@media only screen and (max-width: 1042px) {
+/* Responsive */
+@media (max-width: 600px) {
   .wrapper {
-    width: 80%;
+    padding: 20px;
   }
-}
 
-@media only screen and (max-width: 784px) {
-  body {
-    font-size: 120%;
+  header h1 {
+    font-size: 2rem;
   }
-  h1 {
-    font-size: 2.5em;
+
+  #sub-head h2 {
+    font-size: 1.3rem;
   }
-  h2 {
-    font-size: 1em;
-  }
-  .wrapper {
-    width: 95%;
+
+  #content h3 {
+    font-size: 1.2rem;
   }
 }
